@@ -17,7 +17,8 @@
 async function registerUser(user,isNewUser,authResult){
   document.getElementById('id04').style.display="block";
 if(!isNewUser){
- return  location=`./index.html/?user=${user.uid||authResult.uid}`
+ return  location=`./index.html`;
+  //location=`./index.html/?user=${user.uid||authResult.uid}`
 }
   await db.collection('amalitech').doc('imusic').collection('users')
             .add({
@@ -27,7 +28,7 @@ if(!isNewUser){
           app:'imusic'
             })
 
-            location=`./index.html/?user=${user.uid||authResult.uid}`
+            location=`./index.html`
 }
       </script>
       <script 
