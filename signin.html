@@ -19,7 +19,7 @@ async function registerUser(user,isNewUser,authResult){
 if(!isNewUser){
  return  location=`./index.html/?user=${user.uid||authResult.uid}`
 }
-  await db.collection('imusic').doc('users').collection('registered')
+  await db.collection('amalitech').doc('imusic').collection('users')
             .add({
               name:user.displayName,
           email:user.email,
